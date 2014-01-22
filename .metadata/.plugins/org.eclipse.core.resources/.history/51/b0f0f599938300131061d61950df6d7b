@@ -1,0 +1,33 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/** Class: BorrowerTester
+ *  @author Nannette Napier
+ *  @version 1.0
+ *  Course : ITEC 3860 Spring 2014
+ *  Written: Jan 22, 2014
+ *
+ *  This class ---
+ *  Purpose: --
+ */
+
+/**
+ * @author nnapier
+ *
+ */
+public class BorrowerTester
+{
+
+	@Test
+	public void testNoArgConstructor()
+	{
+		// Create an object using the no arg constructor
+		Borrower borrower = new Borrower();
+		
+		// Check that all the instance variables equal
+		//  "", 0, or false 
+		assertEquals("Testing creditLimit", 0F, borrower.getCreditLimit());
+	}
+
+}
