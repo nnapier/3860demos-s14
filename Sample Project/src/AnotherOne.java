@@ -6,7 +6,9 @@ import java.util.Scanner;
  *  Course : ITEC 3860 Spring 2014
  *  Written: Jan 7, 2014
  *
- *  This class ---
+ *  This class is just an example of something I wanted to
+ *  show my students
+ * 
  *  Purpose: --
  */
 
