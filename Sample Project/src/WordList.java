@@ -42,5 +42,23 @@ public class WordList
 		return wordList.size();
 	}
 	
+	/** This method returns the number of this the provided
+	 *  parameter appears in the wordList
+	 *  @param word Word to count in the list
+	 */
+	public int countWord(String word)
+	{
+		int count = 0;
+		
+		for (String element : wordList)
+		{
+			if (word.equals(element))
+			{
+				count++;
+			}
+		}
+		
+		return count;
+	}
 	
 }
