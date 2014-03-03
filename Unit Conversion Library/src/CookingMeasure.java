@@ -1,0 +1,87 @@
+/** Class: CookingMeasure
+ *  @author Nannette Napier
+ *  @version 1.0
+ *  Course : ITEC 3860 Spring 2014
+ *  Written: Mar 3, 2014
+ *
+ *  This class ---
+ *  Purpose: --
+ */
+
+/**
+ * @author nnapier
+ *
+ */
+public class CookingMeasure extends Measurement
+{
+	public enum ConvertType {GALLONS, QUARTS, PINTS, CUPS, FLUID_OUNCES,
+								TABLESPOON, TEASPOON}
+	
+	// Instance variables -- NONE
+	
+	public CookingMeasure()
+	{
+		super(0);
+	}
+	
+	public CookingMeasure(double numTeaspoons)
+	{
+		super(numTeaspoons);
+	}
+	
+	public CookingMeasure( double numGallons, double numQuarts,
+			double numPints, double numCups, double numFluidOunces,
+			double numTablespoons, double numTeaspoons)
+	{
+		super(0);
+		double tempTeaspoons = 0;
+		tempTeaspoons += numGallons*768;
+		tempTeaspoons += numQuarts*192; // converts to teaspoons
+		tempTeaspoons += numPints*96;  // converts from pints to teaspoons
+		tempTeaspoons += numCups*48;
+		tempTeaspoons += numFluidOunces*6;
+		tempTeaspoons += numTablespoons*3;
+		tempTeaspoons += numTeaspoons;
+		setBaseAmount(tempTeaspoons);
+	}
+	
+	public double represent(ConvertType type)
+	{
+		double temp = 0;
+		if(type == ConvertType.GALLONS)
+		{
+			temp = representAsGallons();
+		}
+		else if(type == ConvertType.QUARTS)
+		{
+			temp = representAsQuarts();
+		}
+		else if (type == ConvertType.PINTS)
+		{
+			temp = representAsPints();
+		}
+		else if (type == ConvertType.CUPS)
+		{
+			temp = representAsCups();
+		}
+		else if(type == ConvertType.FLUID_OUNCES)
+		{
+			temp = representAsFluidOunces();
+		}
+		else if(type == ConvertType.TABLESPOON)
+		{
+			temp = representAsTablespoon();
+		}
+		else if(type == ConvertType.TEASPOON)
+		{
+			temp = representAsTeaspoon();
+		}
+		return temp;
+		
+	}
+
+	public double representAsGallons()
+	{
+		return getBaseAmount()/768;
+	}
+}
