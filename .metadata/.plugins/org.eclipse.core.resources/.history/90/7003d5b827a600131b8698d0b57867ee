@@ -1,0 +1,106 @@
+/** Class: Vehicle
+ *  @author Nannette Napier
+ *  @version 1.0
+ *  Course : ITEC 3860 Spring 2014
+ *  Written: Mar 7, 2014
+ *
+ *  This class ---
+ *  Purpose: --
+ */
+
+/**
+ * @author nnapier
+ *
+ */
+public class Vehicle
+{
+	// Instance variables
+	private String make;
+	private String model;
+	private int year;
+	private int numDoors;
+	private boolean isConvertible;
+	private boolean isManual;
+	private boolean powerPackage;
+	private String engine;
+	private boolean is4By4;
+	private boolean isOverdrive;
+	private int milesDriven;
+	private int numSeats;
+	private boolean hasGPS;
+	private boolean has8Track;
+		
+	/**
+	 * Method: drive
+	 *  Updates the number of miles that we
+	 *  have driven
+	 * @param miles Number of miles driven
+	 */
+	public void drive(int miles)
+	{
+		milesDriven += miles;
+		System.out.println("Total miles driven is " + milesDriven);
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString()
+	{
+		return "Vehicle [make=" + make + ", model=" + model + ", year=" + year
+				+ ", numDoors=" + numDoors + ", isConvertible=" + isConvertible
+				+ ", isManual=" + isManual + ", powerPackage=" + powerPackage
+				+ ", engine=" + engine + ", is4By4=" + is4By4
+				+ ", isOverdrive=" + isOverdrive + ", milesDriven="
+				+ milesDriven + ", numSeats=" + numSeats + ", hasGPS=" + hasGPS
+				+ ", has8Track=" + has8Track + "]";
+	}
+	
+	public static class VehicleBuilder 
+	{
+		// Instance variables
+		private String make;
+		private String model;
+		private int year;
+		private int numDoors;
+		private boolean isConvertible;
+		private boolean isManual;
+		private boolean powerPackage;
+		private String engine;
+		private boolean is4By4;
+		private boolean isOverdrive;
+		private int milesDriven;
+		private int numSeats;
+		private boolean hasGPS;
+		private boolean has8Track;
+		
+		// Builder Methods
+		public VehicleBuilder setMake(String make)
+		{
+			this.make = make;
+			return this;
+		}
+		
+		public VehicleBuilder setModel(String model)
+		{
+			this.model = model;
+			return this;
+		}
+		
+		public VehicleBuilder setYear(int year)
+		{
+			this.year = year;
+			return this;
+		}
+		
+		public VehicleBuilder setNumDoors(int numDoors)
+		{
+			this.numDoors = numDoors;
+			return this;
+		}
+	}
+	
+	
+	
+}

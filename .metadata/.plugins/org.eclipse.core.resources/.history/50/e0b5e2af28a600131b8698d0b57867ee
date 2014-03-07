@@ -1,0 +1,219 @@
+/** Class: Vehicle
+ *  @author Nannette Napier
+ *  @version 1.0
+ *  Course : ITEC 3860 Spring 2014
+ *  Written: Mar 7, 2014
+ *
+ *  This class ---
+ *  Purpose: --
+ */
+
+/**
+ * @author nnapier
+ *
+ */
+public class Vehicle
+{
+	// Instance variables
+	private String make;
+	private String model;
+	private int year;
+	private int numDoors;
+	private boolean isConvertible;
+	private boolean isManual;
+	private boolean powerPackage;
+	private String engine;
+	private boolean is4By4;
+	private boolean isOverdrive;
+	private int milesDriven;
+	private int numSeats;
+	private boolean hasGPS;
+	private boolean has8Track;
+		
+	// Constructor that has a VehicleBuilder 
+	// as a parameter. This is the one that will
+	// have default visibility
+	Vehicle(VehicleBuilder builder)
+	{
+		make = builder.make;
+		model = builder.model;
+		year = builder.year;
+		numDoors = builder.numDoors;
+		isConvertible = builder.isConvertible;
+		isManual = builder.isManual;
+		powerPackage = builder.powerPackage;
+		engine = builder.engine;
+		is4By4 = builder.is4By4;
+		isOverdrive = builder.isOverdrive;
+		milesDriven = builder.milesDriven;
+		numSeats = builder.numSeats;
+		hasGPS = builder.hasGPS;
+		has8Track = builder.has8Track;
+	}
+	
+	/**
+	 * Method: drive
+	 *  Updates the number of miles that we
+	 *  have driven
+	 * @param miles Number of miles driven
+	 */
+	public void drive(int miles)
+	{
+		milesDriven += miles;
+		System.out.println("Total miles driven is " + milesDriven);
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString()
+	{
+		return "Vehicle [make=" + make + ", model=" + model + ", year=" + year
+				+ ", numDoors=" + numDoors + ", isConvertible=" + isConvertible
+				+ ", isManual=" + isManual + ", powerPackage=" + powerPackage
+				+ ", engine=" + engine + ", is4By4=" + is4By4
+				+ ", isOverdrive=" + isOverdrive + ", milesDriven="
+				+ milesDriven + ", numSeats=" + numSeats + ", hasGPS=" + hasGPS
+				+ ", has8Track=" + has8Track + "]";
+	}
+	
+	public static class VehicleBuilder 
+	{
+		// Instance variables
+		private String make;
+		private String model;
+		private int year;
+		private int numDoors;
+		private boolean isConvertible;
+		private boolean isManual;
+		private boolean powerPackage;
+		private String engine;
+		private boolean is4By4;
+		private boolean isOverdrive;
+		private int milesDriven;
+		private int numSeats;
+		private boolean hasGPS;
+		private boolean has8Track;
+		
+		// Builder Methods
+		public VehicleBuilder setMake(String make)
+		{
+			this.make = make;
+			return this;
+		}
+		
+		public VehicleBuilder setModel(String model)
+		{
+			this.model = model;
+			return this;
+		}
+		
+		public VehicleBuilder setYear(int year)
+		{
+			this.year = year;
+			return this;
+		}
+		
+		public VehicleBuilder setNumDoors(int numDoors)
+		{
+			this.numDoors = numDoors;
+			return this;
+		}
+
+		/**
+		 * @param isConvertible the isConvertible to set
+		 */
+		public VehicleBuilder setConvertible(boolean isConvertible)
+		{
+			this.isConvertible = isConvertible;
+			return this;
+		}
+
+		/**
+		 * @param isManual the isManual to set
+		 */
+		public VehicleBuilder setManual(boolean isManual)
+		{
+			this.isManual = isManual;
+			return this;
+		}
+
+		/**
+		 * @param powerPackage the powerPackage to set
+		 */
+		public VehicleBuilder setPowerPackage(boolean powerPackage)
+		{
+			this.powerPackage = powerPackage;
+			return this;
+		}
+
+		/**
+		 * @param engine the engine to set
+		 */
+		public VehicleBuilder setEngine(String engine)
+		{
+			this.engine = engine;
+			return this;
+		}
+
+		/**
+		 * @param is4By4 the is4By4 to set
+		 */
+		public VehicleBuilder setIs4By4(boolean is4By4)
+		{
+			this.is4By4 = is4By4;
+			return this;
+		}
+
+		/**
+		 * @param isOverdrive the isOverdrive to set
+		 */
+		public VehicleBuilder setOverdrive(boolean isOverdrive)
+		{
+			this.isOverdrive = isOverdrive;
+			return this;
+		}
+
+		/**
+		 * @param milesDriven the milesDriven to set
+		 */
+		public VehicleBuilder setMilesDriven(int milesDriven)
+		{
+			this.milesDriven = milesDriven;
+			return this;
+		}
+
+		/**
+		 * @param numSeats the numSeats to set
+		 */
+		public VehicleBuilder setNumSeats(int numSeats)
+		{
+			this.numSeats = numSeats;
+			return this;
+		}
+
+		/**
+		 * @param hasGPS the hasGPS to set
+		 */
+		public VehicleBuilder setHasGPS(boolean hasGPS)
+		{
+			this.hasGPS = hasGPS;
+			return this;
+		}
+
+		/**
+		 * @param has8Track the has8Track to set
+		 */
+		public VehicleBuilder setHas8Track(boolean has8Track)
+		{
+			this.has8Track = has8Track;
+			return this;
+		}
+		
+		
+	}
+	
+	
+	
+}
