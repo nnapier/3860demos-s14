@@ -22,7 +22,17 @@ public class VehicleTester
 	public static void main(String[] args)
 	{
 		// 1) Create VehicleBuilder
+		Vehicle.VehicleBuilder builder = new Vehicle.VehicleBuilder();
+		
+		// 2) Use to create Vehicle
+		Vehicle myCar = builder.setHasGPS(true).setIs4By4(true).setMake("Honda").
+							setModel("Accord").setManual(false).getResult();
 
+		// 3) Display the Vehicle
+		myCar.drive(100);
+		myCar.drive(50);
+		
+		System.out.println("Description of my car follows:\n" + myCar);
 	}
 
 }

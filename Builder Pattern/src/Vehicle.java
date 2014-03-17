@@ -70,12 +70,12 @@ public class Vehicle
 	public String toString()
 	{
 		return "Vehicle [make=" + make + ", model=" + model + ", year=" + year
-				+ ", numDoors=" + numDoors + ", isConvertible=" + isConvertible
-				+ ", isManual=" + isManual + ", powerPackage=" + powerPackage
-				+ ", engine=" + engine + ", is4By4=" + is4By4
+				+ ",\n numDoors=" + numDoors + ", isConvertible=" + isConvertible
+				+ ",\n isManual=" + isManual + ", powerPackage=" + powerPackage
+				+ ",\n engine=" + engine + ", is4By4=" + is4By4
 				+ ", isOverdrive=" + isOverdrive + ", milesDriven="
 				+ milesDriven + ", numSeats=" + numSeats + ", hasGPS=" + hasGPS
-				+ ", has8Track=" + has8Track + "]";
+				+ ",\n has8Track=" + has8Track + "]";
 	}
 	
 	public static class VehicleBuilder 
